@@ -7,7 +7,6 @@ import org.apache.spark.sql.{Column, functions => f}
 import org.apache.spark.sql.catalyst.expressions._
 
 private[syntax] trait StringColumns {
-
   /**
     * Concatenate string columns to form a single one
     *
@@ -107,6 +106,36 @@ private[syntax] trait StringColumns {
       */
 
     /**
+      * Returns a new string column sorted in ascending order.
+      *
+      * @example For example, ["hello"] ["world"] will become ["world"] ["hello"].
+      *
+      * @group String Type
+      * @see [[org.apache.spark.sql.functions.asc]]
+      */
+    def asc: StringColumn = s.elem.map(_.asc).toDC
+
+    /**
+      * Returns a new string column sorted in ascending order putting null values in the beginning.
+      *
+      * @example For example, ["world"] [null] ["hello"] will become [null] ["hello"] ["world"].
+      *
+      * @group String Type
+      * @see [[org.apache.spark.sql.functions.asc_nulls_first()]]
+      */
+    def asc_nulls_first: StringColumn = s.elem.map(_.asc_nulls_first).toDC
+
+    /**
+      * Returns a new string column sorted in ascending order putting null values at the end.
+      *
+      * @example For example, ["world"] [null] ["hello"] will become ["hello"] ["world"] [null].
+      *
+      * @group String Type
+      * @see [[org.apache.spark.sql.functions.asc_nulls_last()]]
+      */
+    def asc_nulls_last: StringColumn = s.elem.map(_.asc_nulls_last).toDC
+
+    /**
       * Computes the numeric value of the first character of the string column,
       * and returns the result as an int column.
       *
@@ -114,6 +143,36 @@ private[syntax] trait StringColumns {
       * @see [[org.apache.spark.sql.functions.ascii]]
       */
     def ascii: IntegerColumn = s.elem.map(f.ascii).toDC
+
+    /**
+      * Returns a new string column sorted in descending order.
+      *
+      * @example For example, ["world"] ["hello"] will become ["hello"] ["world"].
+      *
+      * @group String Type
+      * @see [[org.apache.spark.sql.functions.desc]]
+      */
+    def desc: StringColumn = s.elem.map(_.desc).toDC
+
+    /**
+      * Returns a new string column sorted in descending order putting null values in the beginning.
+      *
+      * @example For example, ["world"] [null] ["hello"] will become [null] ["hello"] ["world"].
+      *
+      * @group String Type
+      * @see [[org.apache.spark.sql.functions.desc_nulls_first()]]
+      */
+    def desc_nulls_first: StringColumn = s.elem.map(_.desc_nulls_first).toDC
+
+    /**
+      * Returns a new string column sorted in descending order putting null values at the end.
+      *
+      * @example For example, ["world"] [null] ["hello"] will become ["hello"] ["world"] [null].
+      *
+      * @group String Type
+      * @see [[org.apache.spark.sql.functions.desc_nulls_last()]]
+      */
+    def desc_nulls_last: StringColumn = s.elem.map(_.desc_nulls_last).toDC
 
     /**
       * Returns a new string column by converting the first letter of each word
