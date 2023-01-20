@@ -10,43 +10,51 @@ __Installation__
 
 To use doric, just add the following dependency in your favourite build tool:
 
+[![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_3-3_2.12)](https://mvnrepository.com/artifact/org.hablapps/doric_3-3_2.12/0.0.5)
+
 _Sbt_
 ```scala
-libraryDependencies += "org.hablapps" % "doric_3-2_2.12" % "0.0.4"
+libraryDependencies += "org.hablapps" % "doric_3-3_2.12" % "0.0.5"
 ```
 _Maven_
 ```xml
 <dependency>
   <groupId>org.hablapps</groupId>
-  <artifactId>doric_3-2_2.12</artifactId>
-  <version>0.0.4</version>
+  <artifactId>doric_3-3_2.12</artifactId>
+  <version>0.0.5</version>
 </dependency>
 ```
 
 Doric is committed to use the most modern APIs first.
-<!-- * Doric is compatible with Spark version 3.2.1. -->
-* The latest stable version of doric is 0.0.4.
-* The latest experimental version of doric is 0.0.0+1-dc213ede-SNAPSHOT.
+<!-- * Doric is compatible with Spark version 3.3.0. -->
+* The latest stable version of doric is 0.0.5.
+* The latest experimental version of doric is 0.0.0+1-efda2d26-SNAPSHOT.
 * Doric is compatible with the following Spark versions:
 
 | Spark | Scala | Tested |                                                                            doric                                                                             |
 |:-----:|:-----:|:------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| 2.4.1 | 2.11  |   ✅   |                                                                              -                                                                               |
-| 2.4.2 | 2.11  |   ✅   |                                                                              -                                                                               |
-| 2.4.3 | 2.11  |   ✅   |                                                                              -                                                                               |
-| 2.4.4 | 2.11  |   ✅   |                                                                              -                                                                               |
-| 2.4.5 | 2.11  |   ✅   |                                                                              -                                                                               |
-| 2.4.6 | 2.11  |   ✅   |                                                                              -                                                                               |
-| 2.4.7 | 2.11  |   ✅   |                                                                              -                                                                               |
-| 2.4.8 | 2.11  |   ✅   | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_2-4_2.11)](https://mvnrepository.com/artifact/org.hablapps/doric_2-4_2.11/0.0.4) |
-| 3.0.0 | 2.12  |   ✅   |                                                                              -                                                                               |
-| 3.0.1 | 2.12  |   ✅   |                                                                              -                                                                               |
-| 3.0.2 | 2.12  |   ✅   | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_3-0_2.12)](https://mvnrepository.com/artifact/org.hablapps/doric_3-0_2.12/0.0.4) |
-| 3.1.0 | 2.12  |   ✅   |                                                                              -                                                                               |
-| 3.1.1 | 2.12  |   ✅   |                                                                              -                                                                               |
-| 3.1.2 | 2.12  |   ✅   | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_3-1_2.12)](https://mvnrepository.com/artifact/org.hablapps/doric_3-1_2.12/0.0.4) |
-| 3.2.0 | 2.12  |   ✅   |                                                                              -                                                                               |
-| 3.2.1 | 2.12  |   ✅   | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_3-2_2.12)](https://mvnrepository.com/artifact/org.hablapps/doric_3-2_2.12/0.0.4) |
+| 2.4.1 | 2.11  |   ✅    |                                                                              -                                                                               |
+| 2.4.2 | 2.11  |   ✅    |                                                                              -                                                                               |
+| 2.4.3 | 2.11  |   ✅    |                                                                              -                                                                               |
+| 2.4.4 | 2.11  |   ✅    |                                                                              -                                                                               |
+| 2.4.5 | 2.11  |   ✅    |                                                                              -                                                                               |
+| 2.4.6 | 2.11  |   ✅    |                                                                              -                                                                               |
+| 2.4.7 | 2.11  |   ✅    |                                                                              -                                                                               |
+| 2.4.8 | 2.11  |   ✅    | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_2-4_2.11)](https://mvnrepository.com/artifact/org.hablapps/doric_2-4_2.11/0.0.5) |
+| 3.0.0 | 2.12  |   ✅    |                                                                              -                                                                               |
+| 3.0.1 | 2.12  |   ✅    |                                                                              -                                                                               |
+| 3.0.2 | 2.12  |   ✅    | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_3-0_2.12)](https://mvnrepository.com/artifact/org.hablapps/doric_3-0_2.12/0.0.5) |
+| 3.1.0 | 2.12  |   ✅    |                                                                              -                                                                               |
+| 3.1.1 | 2.12  |   ✅    |                                                                              -                                                                               |
+| 3.1.2 | 2.12  |   ✅    | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_3-1_2.12)](https://mvnrepository.com/artifact/org.hablapps/doric_3-1_2.12/0.0.5) |
+| 3.2.0 | 2.12  |   ✅    |                                                                              -                                                                               |
+| 3.2.0 | 2.13  |   ✅    |                                                                              -                                                                               |
+| 3.2.1 | 2.12  |   ✅    |                                                                              -                                                                               |
+| 3.2.1 | 2.13  |   ✅    |                                                                              -                                                                               |
+| 3.2.2 | 2.12  |   ✅    | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_3-2_2.12)](https://mvnrepository.com/artifact/org.hablapps/doric_3-2_2.12/0.0.5) |
+| 3.2.2 | 2.13  |   ✅    | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_3-2_2.13)](https://mvnrepository.com/artifact/org.hablapps/doric_3-2_2.13/0.0.5) |
+| 3.3.0 | 2.12  |   ✅    | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_3-3_2.12)](https://mvnrepository.com/artifact/org.hablapps/doric_3-3_2.12/0.0.5) |
+| 3.3.0 | 2.13  |   ✅    | [![Maven Central](https://img.shields.io/maven-central/v/org.hablapps/doric_3-3_2.13)](https://mvnrepository.com/artifact/org.hablapps/doric_3-3_2.13/0.0.5) |
 
 
 __Import statements__
@@ -70,35 +78,35 @@ The overall purpose of doric is providing a type-safe API on top of the DataFram
 that we aim at capturing errors at compile time. For instance, in Spark we can't mix apples and oranges, but this 
 code still compiles:
 ```scala
-def df = List(1,2,3).toDF.select($"value" * f.lit(true))
+def df = List(1,2,3).toDF().select($"value" * f.lit(true))
 ```
 It's only when we try to construct the DataFrame that an exception is raised at _run-time_:
 ```scala
 df
 // org.apache.spark.sql.AnalysisException: cannot resolve '(value * true)' due to data type mismatch: differing types in '(value * true)' (int and boolean).;
-// 'Project [unresolvedalias((value#257 * true), Some(org.apache.spark.sql.Column$$Lambda$4034/0x000000010174f840@576a6f87))]
+// 'Project [unresolvedalias((value#257 * true), Some(org.apache.spark.sql.Column$$Lambda$4148/0x0000000101855040@3153a11d))]
 // +- LocalRelation [value#257]
 // 
 // 	at org.apache.spark.sql.catalyst.analysis.package$AnalysisErrorAt.failAnalysis(package.scala:42)
-// 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$$nestedInanonfun$checkAnalysis$1$2.applyOrElse(CheckAnalysis.scala:190)
-// 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$$nestedInanonfun$checkAnalysis$1$2.applyOrElse(CheckAnalysis.scala:175)
-// 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformUpWithPruning$2(TreeNode.scala:535)
-// 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:82)
-// 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformUpWithPruning(TreeNode.scala:535)
-// 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformUpWithPruning$1(TreeNode.scala:532)
-// 	at org.apache.spark.sql.catalyst.trees.UnaryLike.mapChildren(TreeNode.scala:1122)
-// 	at org.apache.spark.sql.catalyst.trees.UnaryLike.mapChildren$(TreeNode.scala:1121)
-// 	at org.apache.spark.sql.catalyst.expressions.UnaryExpression.mapChildren(Expression.scala:467)
+// 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis$7(CheckAnalysis.scala:212)
+// 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis$7$adapted(CheckAnalysis.scala:192)
+// 	at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:367)
+// 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1(TreeNode.scala:366)
+// 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1$adapted(TreeNode.scala:366)
+// 	at scala.collection.Iterator.foreach(Iterator.scala:943)
+// 	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+// 	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+// 	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
 ```
 
 Using doric, there is no need to wait for so long: errors will be reported at compile-time!
 ```scala
-List(1,2,3).toDF.select(col[Int]("value") * lit(true))
+List(1,2,3).toDF().select(col[Int]("value") * lit(true))
 // error: type mismatch;
 //  found   : Boolean(true)
 //  required: Int
-// List(1,2,3).toDF.select(col[Int]("value") * lit(true))
-//                                                 ^^^^
+// List(1,2,3).toDF().select(col[Int]("value") * lit(true))
+//                                                   ^^^^
 ```
 
 As you may see, changes in column expressions are minimal: just annotate column references with the intended type, 
@@ -120,7 +128,7 @@ Finally, once we have constructed a doric column expression, we can use it withi
 or, in general, wherever we may use plain Spark columns: joins, filters, etc.:
 
 ```scala
-List(1,2,3).toDF.filter(col[Int]("value") > lit(1))
+List(1,2,3).toDF().filter(col[Int]("value") > lit(1))
 // res1: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [value: int]
 ```
 
@@ -131,7 +139,7 @@ are interpreted within the context of `withColumn`, `select`, etc.
 
 Since doric is intended as a replacement of the _whole_ DataFrame API, type-safe versions of Spark functions 
 for numbers, dates, strings, etc., are provided. To know all possible transformations, you can take a look at 
-the [DoricColumn API](https://www.hablapps.com/doric/docs/api/3.2/scala-2.12/api/doric/DoricColumn.html) .Occasionally, however, we might need to mix 
+the [DoricColumn API](https://www.hablapps.com/doric/docs/api/spark-3.2/scala-2.12/doric/DoricColumn.html) .Occasionally, however, we might need to mix 
 both doric and Spark column expressions. There is no problem with that, as this example shows: 
 
 ```scala
@@ -170,10 +178,10 @@ strDf.select(f.col("str").asDoric[String]).show()
 
 ```scala
 
-strDf.select((f.col("str") + f.lit(true)).asDoric[String]).show
+strDf.select((f.col("str") + f.lit(true)).asDoric[String]).show()
 // doric.sem.DoricMultiError: Found 1 error in select
 //   cannot resolve '(CAST(str AS DOUBLE) + true)' due to data type mismatch: differing types in '(CAST(str AS DOUBLE) + true)' (double and boolean).;
-//   'Project [unresolvedalias((cast(str#270 as double) + true), Some(org.apache.spark.sql.Column$$Lambda$4034/0x000000010174f840@576a6f87))]
+//   'Project [unresolvedalias((cast(str#270 as double) + true), Some(org.apache.spark.sql.Column$$Lambda$4148/0x0000000101855040@3153a11d))]
 //   +- Project [value#267 AS str#270]
 //      +- LocalRelation [value#267]
 //   
@@ -183,22 +191,22 @@ strDf.select((f.col("str") + f.lit(true)).asDoric[String]).show
 // 	at cats.data.Validated.fold(Validated.scala:29)
 // 	at doric.sem.package$ErrorThrower.returnOrThrow(package.scala:9)
 // 	at doric.sem.TransformOps$DataframeTransformationSyntax.select(TransformOps.scala:139)
-// 	at repl.MdocSession$App$$anonfun$2.apply$mcV$sp(quickstart.md:76)
-// 	at repl.MdocSession$App$$anonfun$2.apply(quickstart.md:76)
-// 	at repl.MdocSession$App$$anonfun$2.apply(quickstart.md:76)
+// 	at repl.MdocSession$MdocApp$$anonfun$2.apply$mcV$sp(quickstart.md:76)
+// 	at repl.MdocSession$MdocApp$$anonfun$2.apply(quickstart.md:76)
+// 	at repl.MdocSession$MdocApp$$anonfun$2.apply(quickstart.md:76)
 // Caused by: org.apache.spark.sql.AnalysisException: cannot resolve '(CAST(str AS DOUBLE) + true)' due to data type mismatch: differing types in '(CAST(str AS DOUBLE) + true)' (double and boolean).;
-// 'Project [unresolvedalias((cast(str#270 as double) + true), Some(org.apache.spark.sql.Column$$Lambda$4034/0x000000010174f840@576a6f87))]
+// 'Project [unresolvedalias((cast(str#270 as double) + true), Some(org.apache.spark.sql.Column$$Lambda$4148/0x0000000101855040@3153a11d))]
 // +- Project [value#267 AS str#270]
 //    +- LocalRelation [value#267]
 // 
 // 	at org.apache.spark.sql.catalyst.analysis.package$AnalysisErrorAt.failAnalysis(package.scala:42)
-// 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$$nestedInanonfun$checkAnalysis$1$2.applyOrElse(CheckAnalysis.scala:190)
-// 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$$nestedInanonfun$checkAnalysis$1$2.applyOrElse(CheckAnalysis.scala:175)
-// 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformUpWithPruning$2(TreeNode.scala:535)
-// 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:82)
-// 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformUpWithPruning(TreeNode.scala:535)
-// 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformUpWithPruning$1(TreeNode.scala:532)
-// 	at org.apache.spark.sql.catalyst.trees.UnaryLike.mapChildren(TreeNode.scala:1122)
-// 	at org.apache.spark.sql.catalyst.trees.UnaryLike.mapChildren$(TreeNode.scala:1121)
-// 	at org.apache.spark.sql.catalyst.expressions.UnaryExpression.mapChildren(Expression.scala:467)
+// 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis$7(CheckAnalysis.scala:212)
+// 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis$7$adapted(CheckAnalysis.scala:192)
+// 	at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:367)
+// 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1(TreeNode.scala:366)
+// 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1$adapted(TreeNode.scala:366)
+// 	at scala.collection.Iterator.foreach(Iterator.scala:943)
+// 	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+// 	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+// 	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
 ```

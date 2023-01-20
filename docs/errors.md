@@ -11,7 +11,7 @@ permalink: docs/errors/
 Let's see again the error raised by doric when making a reference to a non-existing column:
 ```scala
 // Doric
-List(1,2,3).toDF.select(colInt("id")+1)
+List(1,2,3).toDF().select(colInt("id")+1)
 // doric.sem.DoricMultiError: Found 1 error in select
 //   Cannot resolve column name "id" among (value)
 //   	located at . (errors.md:27)
@@ -20,17 +20,17 @@ List(1,2,3).toDF.select(colInt("id")+1)
 // 	at cats.data.Validated.fold(Validated.scala:29)
 // 	at doric.sem.package$ErrorThrower.returnOrThrow(package.scala:9)
 // 	at doric.sem.TransformOps$DataframeTransformationSyntax.select(TransformOps.scala:139)
-// 	at repl.MdocSession$App$$anonfun$1.apply(errors.md:27)
-// 	at repl.MdocSession$App$$anonfun$1.apply(errors.md:27)
+// 	at repl.MdocSession$MdocApp$$anonfun$1.apply(errors.md:27)
+// 	at repl.MdocSession$MdocApp$$anonfun$1.apply(errors.md:27)
 // Caused by: org.apache.spark.sql.AnalysisException: Cannot resolve column name "id" among (value)
-// 	at org.apache.spark.sql.errors.QueryCompilationErrors$.cannotResolveColumnNameAmongFieldsError(QueryCompilationErrors.scala:2261)
-// 	at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$resolveException(Dataset.scala:258)
-// 	at org.apache.spark.sql.Dataset.$anonfun$resolve$1(Dataset.scala:250)
+// 	at org.apache.spark.sql.errors.QueryCompilationErrors$.cannotResolveColumnNameAmongFieldsError(QueryCompilationErrors.scala:2264)
+// 	at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$resolveException(Dataset.scala:259)
+// 	at org.apache.spark.sql.Dataset.$anonfun$resolve$1(Dataset.scala:251)
 // 	at scala.Option.getOrElse(Option.scala:189)
-// 	at org.apache.spark.sql.Dataset.resolve(Dataset.scala:250)
-// 	at org.apache.spark.sql.Dataset.col(Dataset.scala:1352)
-// 	at org.apache.spark.sql.Dataset.apply(Dataset.scala:1319)
-// 	at doric.types.SparkType.$anonfun$validate$1(SparkType.scala:56)
+// 	at org.apache.spark.sql.Dataset.resolve(Dataset.scala:251)
+// 	at org.apache.spark.sql.Dataset.col(Dataset.scala:1417)
+// 	at org.apache.spark.sql.Dataset.apply(Dataset.scala:1384)
+// 	at doric.types.SparkType.$anonfun$validate$1(SparkType.scala:61)
 // 	at cats.data.KleisliApply.$anonfun$product$2(Kleisli.scala:674)
 // 	at cats.data.Kleisli.$anonfun$map$1(Kleisli.scala:40)
 ```
@@ -57,19 +57,19 @@ val col3 = colInt("unknown") // non-existing column
 ```scala
 dfPair.select(col1, col2, col3)
 // doric.sem.DoricMultiError: Found 3 errors in select
-//   The column with name 'str' is of type StringType and it was expected to be IntegerType
-//   	located at . (errors.md:39)
-//   The column with name 'int' is of type IntegerType and it was expected to be StringType
-//   	located at . (errors.md:42)
 //   Cannot resolve column name "unknown" among (str, int)
 //   	located at . (errors.md:45)
+//   The column with name 'int' was expected to be StringType but is of type IntegerType
+//   	located at . (errors.md:42)
+//   The column with name 'str' was expected to be IntegerType but is of type StringType
+//   	located at . (errors.md:39)
 // 
 // 	at doric.sem.package$ErrorThrower.$anonfun$returnOrThrow$1(package.scala:9)
 // 	at cats.data.Validated.fold(Validated.scala:29)
 // 	at doric.sem.package$ErrorThrower.returnOrThrow(package.scala:9)
 // 	at doric.sem.TransformOps$DataframeTransformationSyntax.select(TransformOps.scala:139)
-// 	at repl.MdocSession$App$$anonfun$2.apply(errors.md:52)
-// 	at repl.MdocSession$App$$anonfun$2.apply(errors.md:52)
+// 	at repl.MdocSession$MdocApp$$anonfun$2.apply(errors.md:52)
+// 	at repl.MdocSession$MdocApp$$anonfun$2.apply(errors.md:52)
 ```
 
 As we can see, the select expression throws a _single_ exception reporting the three different errors. There is no
